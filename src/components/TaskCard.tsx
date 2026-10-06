@@ -42,7 +42,6 @@ export function TaskCard({
           e.stopPropagation();
           openBitrixTask(task.id, portalUrl);
         }}
-        onPointerDown={(e) => e.stopPropagation()}
       >
         {task.title}
       </button>

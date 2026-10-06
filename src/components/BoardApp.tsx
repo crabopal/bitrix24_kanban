@@ -252,16 +252,17 @@ export function BoardApp({ portalUrl }: { portalUrl?: string | null }) {
             id="search"
             value={searchInput}
             placeholder="Название или ID задачи"
-            onChange={(e) => setSearchInput(e.target.value)}
+            onChange={(e) => {
+              const value = e.target.value;
+              setSearchInput(value);
+              setSearch(value);
+              persistFilters({ search: value });
+            }}
             onKeyDown={(e) => {
               if (e.key === "Enter") {
                 setSearch(searchInput);
                 persistFilters({ search: searchInput });
               }
-            }}
-            onBlur={() => {
-              setSearch(searchInput);
-              persistFilters({ search: searchInput });
             }}
           />
         </div>

@@ -1,0 +1,6 @@
+﻿# Vendor parent configurations — .cf often exceeds GitLab/GitHub 100 MiB blob limit
+/Config/Ext/ParentConfigurations/*.cf
+/Config/Ext/ParentConfigurations.bin
+/Config/Configuration.ParentConfigurations.bin
+/Config/Configuration.ParentConfigurations
+*.cf
